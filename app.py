@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    onto = get_ontology("/Users/robertosanchez/Desktop/gaming_popularity.owl").load()
+    onto = get_ontology("gaming_popularity.owl").load()
 
     cl = list(onto.classes())
 
@@ -41,19 +41,19 @@ def home():
             results = list(onto.search(type=Game, hasRating=onto.E))
             for r in results:
                 print(r.name)
-                
+
             print(list(onto.object_properties()))
 
     return render_template("index.html", cl=cl, games=games, ranks=ranks, ratings=ratings, objectProperties=objectProperties)
 
 @app.route('/save', methods=['POST'])
 def save():
-    onto = get_ontology("/Users/robertosanchez/Desktop/gaming_popularity.owl").load()
+    onto = get_ontology("gaming_popularity.owl").load()
     gameName = request.form.get('game_name')
     new_game = onto.Game()
     new_game.name = gameName.replace(' ', '_')
 
-    onto.save(file="/Users/robertosanchez/Desktop/gaming_popularity.owl", format="rdfxml")
+    onto.save(file="gaming_popularity.owl", format="rdfxml")
 
 
     return redirect(url_for('home'))

@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#"
+     xml:base="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:gaming_popularity="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#hasRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#hasRating">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#hasSalesRank -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#hasSalesRank"/>
+    
+
+
+    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#isRanked -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#isRanked">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#rating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#rating">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#rating"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Game -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Game"/>
+    
+
+
+    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rank -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rank"/>
+    
+
+
+    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rating"/>
+    
+
+
+    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#salesRank -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#salesRank">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rank"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#CallOfDuty -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#CallOfDuty">
+        <rdf:type rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Game"/>
+        <hasRating rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#M"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#E -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#E">
+        <rdf:type rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#ET -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#ET">
+        <rdf:type rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#FIFA_23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#FIFA_23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Game"/>
+        <hasRating rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#E"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#M -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#M">
+        <rdf:type rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#T -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#T">
+        <rdf:type rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rating"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
