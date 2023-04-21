@@ -11,6 +11,48 @@
 </head>
 <body>
     <div class="container">
+        <div class="col-6" style="margin: 20px auto">
+            <div class="card">
+                <div class="card-header">Query</div>
+                <div class="card-body">
+                    <form action="/save" class="" method="POST">
+                        <div class="form-group">
+                            <label for="">Enter Game Name</label>
+                            <input class="form-control" type="text" name="game_name" id="">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="">Enter Game rank</label>
+                            <input class="form-control" type="number" name="game_rank" id="">
+                        </div>
+            
+                        <select name="" id="">
+                            {% for o in objectProperties %}
+                                <option value="">{{o.name}}</option>
+                            {% endfor %}
+                            
+                        </select>
+                        <br>
+                        <div class="form-group">
+                            <label for="">Enter Game rating</label>
+                            <input class="form-control" type="text" name="game_rating" id="">
+            
+                            
+                            <select name="" id="">
+                                {% for r in ratings %}
+                                    <option value="">{{ r.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <button class="btn btn-primary" type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br>
         <h2>Classes from ontology</h2>
         <p>{{cl}}</p>
         <h2>Games from ontology</h2>
@@ -20,26 +62,7 @@
         <h2>Ratings from ontology</h2>
         <p>{{ratings}}</p>
     
-        <form action="/save" class="" method="POST">
-            <div class="form-group">
-                <label for="">Enter Game Name</label>
-                <input class="form-control" type="text" name="game_name" id="">
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="">Enter Game rank</label>
-                <input class="form-control" type="number" name="game_rank" id="">
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="">Enter Game rating</label>
-                <input class="form-control" type="text" name="game_rating" id="">
-            </div>
-            <br>
-            <div class="form-group">
-                <button class="btn btn-primary" type="submit">Save</button>
-            </div>
-        </form>
+
     </div>
 </body>
 </html>
