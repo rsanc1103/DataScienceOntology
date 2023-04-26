@@ -13,7 +13,7 @@
     <div class="container">
         <div class="col-6" style="margin: 20px auto">
             <div class="card">
-                <div class="card-header">Query</div>
+                <div class="card-header">Save to Ontology</div>
                 <div class="card-body">
                     <form action="/save" class="" method="POST">
                         <div class="form-group">
@@ -51,18 +51,59 @@
                     </form>
                 </div>
             </div>
-        </div>
-        <br>
-        <h2>Classes from ontology</h2>
-        <p>{{cl}}</p>
-        <h2>Games from ontology</h2>
-        <p>{{games}}</p>
-        <h2>Ranks from ontology</h2>
-        <p>{{ranks}}</p>
-        <h2>Ratings from ontology</h2>
-        <p>{{ratings}}</p>
-    
 
+
+            <div class="card" style="margin-top: 20px;">
+                <div class="card-header">Query</div>
+                <div class="card-body">
+                    <form action="/query" method="post">
+                        <label for="">Class</label>
+                        <select name="" id="" class="form-control">
+                            <option value=""></option>
+                            {% for c in cl %}
+                                    <option value="">{{ c }}</option>
+                            {% endfor %}
+                        </select>
+                        <br>
+                        <label for="">Games</label>
+                        <select name="q_game_name" id="" class="form-control">
+                            <option value=""></option>
+                            {% for g in games %}
+                                    <option value="{{g}}">{{ g|e }}</option>
+                            {% endfor %}
+                        </select>
+                        <br>
+                        <label for="">Properties</label>
+                        <select name="" id="" class="form-control">
+                            <option value=""></option>
+                            {% for o in objectProperties %}
+                                <option value="">{{o.name}}</option>
+                            {% endfor %}
+                        </select>
+                        <br>
+                        <label for="">Ranks</label>
+                        <select name="" id="" class="form-control">
+                            <option value=""></option>
+                                {% for r in ranks %}
+                                        <option value="">{{ r|e }}</option>
+                                {% endfor %}
+                        </select>
+                        <br>
+                        <label for="">Ratings</label>
+                        <select name="q_rating" id="" class="form-control">
+                            <option value=""></option>
+                            {% for r in ratings %}
+                                    <option value="{{r.name}}">{{ r.name|e }}</option>
+                            {% endfor %}
+                        </select>
+                        <br>
+                        <button class="btn btn-primary">Query</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    
     </div>
 </body>
 </html>
