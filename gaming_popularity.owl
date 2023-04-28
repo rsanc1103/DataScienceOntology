@@ -1,169 +1,140 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:gaming_popularity="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#hasRating -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#hasRating">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#hasSalesRank -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#hasSalesRank"/>
-    
-
-
-    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#isRanked -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#isRanked">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#rating -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#rating">
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#rating"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:domain>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Game -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Game"/>
-    
-
-
-    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rank -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rank"/>
-    
-
-
-    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rating -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rating"/>
-    
-
-
-    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#salesRank -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#salesRank">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rank"/>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#CallOfDuty -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#CallOfDuty">
-        <rdf:type rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Game"/>
-        <hasRating rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#M"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#E -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#E">
-        <rdf:type rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rating"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#ET -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#ET">
-        <rdf:type rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rating"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#FIFA_23 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#FIFA_23">
-        <rdf:type rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Game"/>
-        <hasRating rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#E"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#M -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#M">
-        <rdf:type rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rating"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#T -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#T">
-        <rdf:type rdf:resource="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#Rating"/>
-    </owl:NamedIndividual>
-</rdf:RDF>
+     ontologyIRI="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity">
+    <Prefix name="" IRI="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="gaming_popularity" IRI="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#"/>
+    <Declaration>
+        <Class IRI="#Game"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rank"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rating"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#salesRank"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRating"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#genre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isRanked"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BloodAndGore"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CallOfDuty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#E"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ET"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FIFA_23"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Language"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#M"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#T"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#World_War_Z"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#salesRank"/>
+        <Class IRI="#Rank"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#CallOfDuty"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rating"/>
+        <NamedIndividual IRI="#E"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rating"/>
+        <NamedIndividual IRI="#ET"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#FIFA_23"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rating"/>
+        <NamedIndividual IRI="#M"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rating"/>
+        <NamedIndividual IRI="#T"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#World_War_Z"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#CallOfDuty"/>
+        <NamedIndividual IRI="#M"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#FIFA_23"/>
+        <NamedIndividual IRI="#E"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#World_War_Z"/>
+        <NamedIndividual IRI="#BloodAndGore"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isRanked"/>
+        <NamedIndividual IRI="#CallOfDuty"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genre"/>
+        <NamedIndividual IRI="#FIFA_23"/>
+        <Literal>sports</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasRating"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#isRanked"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="#genre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isRanked"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+</Ontology>
 
 
 

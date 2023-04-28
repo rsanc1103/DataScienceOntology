@@ -5,105 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
 </head>
+<style>
+    .hidden {
+  display: none;
+}
+
+</style>
 <body>
     <div class="container">
         <div class="col-6" style="margin: 20px auto">
             <div class="card">
-                <div class="card-header">Save to Ontology</div>
-                <div class="card-body">
-                    <form action="/save" class="" method="POST">
-                        <div class="form-group">
-                            <label for="">Enter Game Name</label>
-                            <input class="form-control" type="text" name="game_name" id="">
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <label for="">Enter Game rank</label>
-                            <input class="form-control" type="number" name="game_rank" id="">
-                        </div>
-            
-                        <select name="" id="">
-                            {% for o in objectProperties %}
-                                <option value="">{{o.name}}</option>
-                            {% endfor %}
-                            
-                        </select>
-                        <br>
-                        <div class="form-group">
-                            <label for="">Enter Game rating</label>
-                            <input class="form-control" type="text" name="game_rating" id="">
-            
-                            
-                            <select name="" id="">
-                                {% for r in ratings %}
-                                    <option value="">{{ r.name }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <button class="btn btn-primary" type="submit">Save</button>
-                        </div>
-                    </form>
+                <div class="card-header">
+                    Game queries
                 </div>
-            </div>
-
-
-            <div class="card" style="margin-top: 20px;">
-                <div class="card-header">Query</div>
                 <div class="card-body">
                     <form action="/query" method="post">
                         <label for="">Class</label>
-                        <select name="" id="" class="form-control">
+                        <select name="q_class" id="classDropdown" class="form-control">
                             <option value=""></option>
                             {% for c in cl %}
-                                    <option value="">{{ c }}</option>
+                                    <option value="{{ c.name }}">{{ c.name }}</option>
                             {% endfor %}
                         </select>
-                        <br>
-                        <label for="">Games</label>
-                        <select name="q_game_name" id="" class="form-control">
-                            <option value=""></option>
-                            {% for g in games %}
-                                    <option value="{{g}}">{{ g|e }}</option>
-                            {% endfor %}
-                        </select>
-                        <br>
-                        <label for="">Properties</label>
-                        <select name="" id="" class="form-control">
-                            <option value=""></option>
-                            {% for o in objectProperties %}
-                                <option value="">{{o.name}}</option>
-                            {% endfor %}
-                        </select>
-                        <br>
-                        <label for="">Ranks</label>
-                        <select name="" id="" class="form-control">
-                            <option value=""></option>
-                                {% for r in ranks %}
-                                        <option value="">{{ r|e }}</option>
+                        <div id="objectDropdown" class="hidden">
+                            <br>
+                            <label for="">Properties</label>
+                            <select name="objectProperty" id="propertiesDropdown" class="form-control">
+                                <option value=""></option>
+                                {% for o in objectProperties %}
+                                    <option value="{{o.name}}">{{o.name}}</option>
                                 {% endfor %}
-                        </select>
-                        <br>
-                        <label for="">Ratings</label>
-                        <select name="q_rating" id="" class="form-control">
-                            <option value=""></option>
-                            {% for r in ratings %}
-                                    <option value="{{r.name}}">{{ r.name|e }}</option>
-                            {% endfor %}
-                        </select>
+                                {% for d in dataProperties %}
+                                    <option value="{{d.name}}">{{d.name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div id="ratingDropdown" class="hidden">
+                            <br>
+                            <label for="">Rating</label>
+                            <select name="q_rating" id="" class="form-control">
+                                <option value=""></option>
+                                {% for r in ratings %}
+                                        <option value="{{r.name}}">{{ r.name|e }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div id="inputDropdown" class="hidden">
+                            <br>
+                            <!-- <label for="">Ranks</label> -->
+                            <input type="text" class="form-control" name="q_rank" onkeyup="console.log(this.value);">
+                        </div>
                         <br>
                         <button class="btn btn-primary">Query</button>
                     </form>
                 </div>
             </div>
-
         </div>
+
     
     </div>
 </body>
+<script>
+    $(document).ready(function() {
+
+        // Listen for changes to the first dropdown
+        $('#classDropdown').change(function() {
+            // Get the selected value
+            var selectedValue = $(this).val();
+
+            console.log(selectedValue);
+
+            // Show/hide the other dropdowns based on the selected value
+            if (selectedValue == 'Game') {
+                $('#objectDropdown').removeClass('hidden');
+            } else if (selectedValue == 'Rating') {
+
+            }
+        });
+
+        // Listen for changes to the first dropdown
+        $('#propertiesDropdown').change(function() {
+            // Get the selected value
+            var selectedValue = $(this).val();
+            console.log(selectedValue);
+            // Show/hide the other dropdowns based on the selected value
+            if (selectedValue == 'hasRating') {
+            $('#ratingDropdown').removeClass('hidden');
+            } else if (selectedValue == 'isRanked' || selectedValue == 'genre') {
+            $('#inputDropdown').removeClass('hidden');
+            }
+        });
+
+    });
+
+</script>
 </html>
