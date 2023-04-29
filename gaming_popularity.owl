@@ -35,9 +35,6 @@
         <DataProperty IRI="#isRanked"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BloodAndGore"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#CallOfDuty"/>
     </Declaration>
     <Declaration>
@@ -48,9 +45,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#FIFA_23"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Language"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#M"/>
@@ -103,11 +97,11 @@
         <NamedIndividual IRI="#FIFA_23"/>
         <NamedIndividual IRI="#E"/>
     </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasRating"/>
-        <NamedIndividual IRI="#World_War_Z"/>
-        <NamedIndividual IRI="#BloodAndGore"/>
-    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genre"/>
+        <NamedIndividual IRI="#CallOfDuty"/>
+        <Literal>first person shooter</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isRanked"/>
         <NamedIndividual IRI="#CallOfDuty"/>

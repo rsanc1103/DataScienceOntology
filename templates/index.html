@@ -20,6 +20,84 @@
     <div class="container">
         <div class="col-6" style="margin: 20px auto">
             <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <span>Classes</span>
+                            <select name="" id="" class="form-control">
+                                <option value=""></option>
+                                {% for c in cl %}
+                                        <option value="{{ c.name }}">{{ c.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col">
+                            <span>Properties</span>
+                            <select name="" id="" class="form-control">
+                                <option value=""></option>
+                                {% for o in objectProperties %}
+                                    <option value="{{o.name}}">{{o.name}}</option>
+                                {% endfor %}
+                                {% for d in dataProperties %}
+                                    <option value="{{d.name}}">{{d.name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col">
+                            <span>Ratings</span>
+                            <select name="" id="" class="form-control">
+                                <option value=""></option>
+                                {% for r in ratings %}
+                                        <option value="{{r.name}}">{{ r.name|e }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col">
+                            <span>Games</span>
+                            <select name="" id="" class="form-control">
+                                <option value=""></option>
+                                {% for r in games %}
+                                        <option value="{{r.name}}">{{ r.name|e }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+            <br>
+
+
+            <div class="card">
+                <div class="card-body">
+                    <form action="/query" method="post">
+                        <textarea name="sparql" id="" cols="30" rows="10" class="form-control" placeholder="Write a SPARQL query"></textarea>
+                        <br>
+                        <div style="text-align: center;">
+                            <button class="btn btn-primary" type="submit">Run</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {% if results|length > 0 %}
+            <br>
+            <table class="table table-bordered table-hover">
+                <tbody>
+                    {% for r in results %}
+                        <tr>
+                            <td>{{ r }}</td>
+                        </tr>        
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div style="text-align: right">
+                <form action="/clear" method="post">
+                    <button class="btn btn-secondary" type="submit">Clear</button>
+                </form>
+            </div>
+            {% endif %}
+
+            <!-- <div class="card">
                 <div class="card-header">
                     Game queries
                 </div>
@@ -57,14 +135,13 @@
                         </div>
                         <div id="inputDropdown" class="hidden">
                             <br>
-                            <!-- <label for="">Ranks</label> -->
                             <input type="text" class="form-control" name="q_rank" onkeyup="console.log(this.value);">
                         </div>
                         <br>
                         <button class="btn btn-primary">Query</button>
                     </form>
                 </div>
-            </div>
+            </div> -->
         </div>
 
     
