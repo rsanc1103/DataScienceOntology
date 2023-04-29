@@ -14,28 +14,64 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="gaming_popularity" IRI="http://www.semanticweb.org/robertosanchez/ontologies/2023/2/gaming_popularity#"/>
     <Declaration>
+        <Class IRI="#Depicts"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Game"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Rank"/>
+        <Class IRI="#Genre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Publisher"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Rating"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#salesRank"/>
+        <ObjectProperty IRI="#hasDepicts"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasRating"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#ofGenre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#publishedBy"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#genre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hoursWatched"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#isRanked"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#CallOfDuty"/>
+        <DataProperty IRI="#releaseYear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Action"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Adventure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Arcade"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Automobile"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BattleRoyal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BloodAndGore"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Call_of_Duty"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#E"/>
@@ -44,24 +80,56 @@
         <NamedIndividual IRI="#ET"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ElectronicArts"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#FIFA_23"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FirstPersonShooter"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#M"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#T"/>
+        <NamedIndividual IRI="#Madden_22"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#World_War_Z"/>
+        <NamedIndividual IRI="#OpenWorld"/>
     </Declaration>
-    <SubClassOf>
-        <Class IRI="#salesRank"/>
-        <Class IRI="#Rank"/>
-    </SubClassOf>
+    <Declaration>
+        <NamedIndividual IRI="#Sports"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#T"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Action"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Adventure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Arcade"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Automobile"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#BattleRoyal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Depicts"/>
+        <NamedIndividual IRI="#BloodAndGore"/>
+    </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Game"/>
-        <NamedIndividual IRI="#CallOfDuty"/>
+        <NamedIndividual IRI="#Call_of_Duty"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Rating"/>
@@ -72,45 +140,81 @@
         <NamedIndividual IRI="#ET"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#ElectronicArts"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Game"/>
         <NamedIndividual IRI="#FIFA_23"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#FirstPersonShooter"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Rating"/>
         <NamedIndividual IRI="#M"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#Madden_22"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#OpenWorld"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Sports"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Rating"/>
         <NamedIndividual IRI="#T"/>
     </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Game"/>
-        <NamedIndividual IRI="#World_War_Z"/>
-    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDepicts"/>
+        <NamedIndividual IRI="#Call_of_Duty"/>
+        <NamedIndividual IRI="#BloodAndGore"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRating"/>
-        <NamedIndividual IRI="#CallOfDuty"/>
+        <NamedIndividual IRI="#Call_of_Duty"/>
         <NamedIndividual IRI="#M"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ofGenre"/>
+        <NamedIndividual IRI="#Call_of_Duty"/>
+        <NamedIndividual IRI="#FirstPersonShooter"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRating"/>
         <NamedIndividual IRI="#FIFA_23"/>
         <NamedIndividual IRI="#E"/>
     </ObjectPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#genre"/>
-        <NamedIndividual IRI="#CallOfDuty"/>
-        <Literal>first person shooter</Literal>
-    </DataPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ofGenre"/>
+        <NamedIndividual IRI="#FIFA_23"/>
+        <NamedIndividual IRI="#Sports"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#Madden_22"/>
+        <NamedIndividual IRI="#ElectronicArts"/>
+    </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isRanked"/>
-        <NamedIndividual IRI="#CallOfDuty"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+        <NamedIndividual IRI="#Call_of_Duty"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#genre"/>
+        <DataProperty IRI="#hoursWatched"/>
         <NamedIndividual IRI="#FIFA_23"/>
-        <Literal>sports</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">35953907</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#releaseYear"/>
+        <NamedIndividual IRI="#Madden_22"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2021</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasRating"/>
@@ -125,7 +229,15 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hoursWatched"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#isRanked"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#releaseYear"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
 </Ontology>

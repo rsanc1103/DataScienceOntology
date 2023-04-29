@@ -53,6 +53,15 @@
                             </select>
                         </div>
                         <div class="col">
+                            <span>Genres</span>
+                            <select name="" id="" class="form-control">
+                                <option value=""></option>
+                                {% for g in genres %}
+                                        <option value="{{g.name}}">{{ g.name|e }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col">
                             <span>Games</span>
                             <select name="" id="" class="form-control">
                                 <option value=""></option>
@@ -85,7 +94,10 @@
                 <tbody>
                     {% for r in results %}
                         <tr>
-                            <td>{{ r }}</td>
+                            {% for c in r %}
+                                    <td>{{ c }}</td>
+                            {% endfor %}
+                            
                         </tr>        
                     {% endfor %}
                 </tbody>
@@ -96,89 +108,37 @@
                 </form>
             </div>
             {% endif %}
-
-            <!-- <div class="card">
-                <div class="card-header">
-                    Game queries
-                </div>
-                <div class="card-body">
-                    <form action="/query" method="post">
-                        <label for="">Class</label>
-                        <select name="q_class" id="classDropdown" class="form-control">
-                            <option value=""></option>
-                            {% for c in cl %}
-                                    <option value="{{ c.name }}">{{ c.name }}</option>
-                            {% endfor %}
-                        </select>
-                        <div id="objectDropdown" class="hidden">
-                            <br>
-                            <label for="">Properties</label>
-                            <select name="objectProperty" id="propertiesDropdown" class="form-control">
-                                <option value=""></option>
-                                {% for o in objectProperties %}
-                                    <option value="{{o.name}}">{{o.name}}</option>
-                                {% endfor %}
-                                {% for d in dataProperties %}
-                                    <option value="{{d.name}}">{{d.name}}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div id="ratingDropdown" class="hidden">
-                            <br>
-                            <label for="">Rating</label>
-                            <select name="q_rating" id="" class="form-control">
-                                <option value=""></option>
-                                {% for r in ratings %}
-                                        <option value="{{r.name}}">{{ r.name|e }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div id="inputDropdown" class="hidden">
-                            <br>
-                            <input type="text" class="form-control" name="q_rank" onkeyup="console.log(this.value);">
-                        </div>
-                        <br>
-                        <button class="btn btn-primary">Query</button>
-                    </form>
-                </div>
-            </div> -->
         </div>
+
+        <div>
+            <table class="table table-hover" style="margin-top: 200px;">
+                <thead>
+                    <th>Source</th>
+                    <th>License</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>M. Alhamad, 29-Jan-2021 , “Video Games Rating by ‘ESRB’”, Source. [Online]. Available: <a href="https://www.kaggle.com/datasets/imohtn/video-games-rating-by-esrb">https://www.kaggle.com/datasets/imohtn/video-games-rating-by-esrb</a> . [Accessed: 27-Mar-2023].</td>
+                        <td>CC0: Public Domain</td>
+                    </tr>
+                    <tr>
+                        <td>R. Kirsh, 4-Feb-2023 , “Top games on Twitch 2016 - 2021”, Source. [Online]. Available: <a href="https://www.kaggle.com/datasets/rankirsh/evolution-of-top-games-on-twitch">https://www.kaggle.com/datasets/rankirsh/evolution-of-top-games-on-twitch</a> . [Accessed: 27-Mar-2023].</td>
+                        <td>CC0: Public Domain</td>
+                    </tr>
+                    <tr>
+                        <td>J. Holm, 16-Aug-2021 , “Video Game Sales Data”, Source. [Online]. Available: <a href="https://www.kaggle.com/datasets/holmjason2/videogamedata">https://www.kaggle.com/datasets/holmjason2/videogamedata</a> . [Accessed: 27-Mar-2023].</td>
+                        <td>CC0: Public Domain</td>
+                    </tr>
+                    <tr>
+                        <td>Souyama, 20-Aug-2022 , “Steam Dataset”, Source. [Online]. Available: <a href="https://www.kaggle.com/datasets/souyama/steam-dataset">https://www.kaggle.com/datasets/souyama/steam-dataset</a> . [Accessed: 27-Mar-2023].</td>
+                        <td>CC0: Public Domain</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
 
     
     </div>
 </body>
-<script>
-    $(document).ready(function() {
-
-        // Listen for changes to the first dropdown
-        $('#classDropdown').change(function() {
-            // Get the selected value
-            var selectedValue = $(this).val();
-
-            console.log(selectedValue);
-
-            // Show/hide the other dropdowns based on the selected value
-            if (selectedValue == 'Game') {
-                $('#objectDropdown').removeClass('hidden');
-            } else if (selectedValue == 'Rating') {
-
-            }
-        });
-
-        // Listen for changes to the first dropdown
-        $('#propertiesDropdown').change(function() {
-            // Get the selected value
-            var selectedValue = $(this).val();
-            console.log(selectedValue);
-            // Show/hide the other dropdowns based on the selected value
-            if (selectedValue == 'hasRating') {
-            $('#ratingDropdown').removeClass('hidden');
-            } else if (selectedValue == 'isRanked' || selectedValue == 'genre') {
-            $('#inputDropdown').removeClass('hidden');
-            }
-        });
-
-    });
-
-</script>
 </html>
