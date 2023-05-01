@@ -41,9 +41,6 @@
         <ObjectProperty IRI="#publishedBy"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#genre"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#hoursWatched"/>
     </Declaration>
     <Declaration>
@@ -71,7 +68,13 @@
         <NamedIndividual IRI="#BloodAndGore"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#BohemiaInteractive"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Call_of_Duty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DayZ"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#E"/>
@@ -89,19 +92,52 @@
         <NamedIndividual IRI="#FirstPersonShooter"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#God_of_War"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#M"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Madden_22"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Minecraft"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MojangStudios"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#OpenWorld"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Red_Dead_Redemption_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RockstarGames"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SonyInteractiveEntertainment"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Sports"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Survival"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#T"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tales_from_the_Borderlands"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TelltaleGames"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#blood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fantasy_violence"/>
     </Declaration>
     <ClassAssertion>
         <Class IRI="#Genre"/>
@@ -128,8 +164,16 @@
         <NamedIndividual IRI="#BloodAndGore"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#BohemiaInteractive"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Game"/>
         <NamedIndividual IRI="#Call_of_Duty"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#DayZ"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Rating"/>
@@ -152,6 +196,10 @@
         <NamedIndividual IRI="#FirstPersonShooter"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#God_of_War"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Rating"/>
         <NamedIndividual IRI="#M"/>
     </ClassAssertion>
@@ -160,16 +208,56 @@
         <NamedIndividual IRI="#Madden_22"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#Minecraft"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#MojangStudios"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Genre"/>
         <NamedIndividual IRI="#OpenWorld"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#Red_Dead_Redemption_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#RockstarGames"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#SonyInteractiveEntertainment"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Genre"/>
         <NamedIndividual IRI="#Sports"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Survival"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Rating"/>
         <NamedIndividual IRI="#T"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Game"/>
+        <NamedIndividual IRI="#Tales_from_the_Borderlands"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#TelltaleGames"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#blood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Depicts"/>
+        <NamedIndividual IRI="#fantasy_violence"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDepicts"/>
@@ -187,6 +275,26 @@
         <NamedIndividual IRI="#FirstPersonShooter"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDepicts"/>
+        <NamedIndividual IRI="#DayZ"/>
+        <NamedIndividual IRI="#blood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#DayZ"/>
+        <NamedIndividual IRI="#M"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ofGenre"/>
+        <NamedIndividual IRI="#DayZ"/>
+        <NamedIndividual IRI="#OpenWorld"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#DayZ"/>
+        <NamedIndividual IRI="#BohemiaInteractive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRating"/>
         <NamedIndividual IRI="#FIFA_23"/>
         <NamedIndividual IRI="#E"/>
@@ -197,14 +305,119 @@
         <NamedIndividual IRI="#Sports"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDepicts"/>
+        <NamedIndividual IRI="#God_of_War"/>
+        <NamedIndividual IRI="#BloodAndGore"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#God_of_War"/>
+        <NamedIndividual IRI="#M"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ofGenre"/>
+        <NamedIndividual IRI="#God_of_War"/>
+        <NamedIndividual IRI="#Action"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#God_of_War"/>
+        <NamedIndividual IRI="#SonyInteractiveEntertainment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#publishedBy"/>
         <NamedIndividual IRI="#Madden_22"/>
         <NamedIndividual IRI="#ElectronicArts"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDepicts"/>
+        <NamedIndividual IRI="#Minecraft"/>
+        <NamedIndividual IRI="#fantasy_violence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#Minecraft"/>
+        <NamedIndividual IRI="#ET"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ofGenre"/>
+        <NamedIndividual IRI="#Minecraft"/>
+        <NamedIndividual IRI="#Survival"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#Minecraft"/>
+        <NamedIndividual IRI="#MojangStudios"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDepicts"/>
+        <NamedIndividual IRI="#Red_Dead_Redemption_2"/>
+        <NamedIndividual IRI="#BloodAndGore"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#Red_Dead_Redemption_2"/>
+        <NamedIndividual IRI="#M"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ofGenre"/>
+        <NamedIndividual IRI="#Red_Dead_Redemption_2"/>
+        <NamedIndividual IRI="#OpenWorld"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#Red_Dead_Redemption_2"/>
+        <NamedIndividual IRI="#RockstarGames"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDepicts"/>
+        <NamedIndividual IRI="#Tales_from_the_Borderlands"/>
+        <NamedIndividual IRI="#BloodAndGore"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRating"/>
+        <NamedIndividual IRI="#Tales_from_the_Borderlands"/>
+        <NamedIndividual IRI="#M"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ofGenre"/>
+        <NamedIndividual IRI="#Tales_from_the_Borderlands"/>
+        <NamedIndividual IRI="#Adventure"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#publishedBy"/>
+        <NamedIndividual IRI="#Tales_from_the_Borderlands"/>
+        <NamedIndividual IRI="#TelltaleGames"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hoursWatched"/>
+        <NamedIndividual IRI="#Call_of_Duty"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">16153057</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isRanked"/>
         <NamedIndividual IRI="#Call_of_Duty"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#releaseYear"/>
+        <NamedIndividual IRI="#Call_of_Duty"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hoursWatched"/>
+        <NamedIndividual IRI="#DayZ"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2321012</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isRanked"/>
+        <NamedIndividual IRI="#DayZ"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">582</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#releaseYear"/>
+        <NamedIndividual IRI="#DayZ"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2019</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hoursWatched"/>
@@ -212,22 +425,84 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">35953907</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hoursWatched"/>
+        <NamedIndividual IRI="#God_of_War"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20301689</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isRanked"/>
+        <NamedIndividual IRI="#God_of_War"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">300</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#releaseYear"/>
+        <NamedIndividual IRI="#God_of_War"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2018</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#releaseYear"/>
         <NamedIndividual IRI="#Madden_22"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2021</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hoursWatched"/>
+        <NamedIndividual IRI="#Minecraft"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10231056</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isRanked"/>
+        <NamedIndividual IRI="#Minecraft"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#releaseYear"/>
+        <NamedIndividual IRI="#Minecraft"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2014</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hoursWatched"/>
+        <NamedIndividual IRI="#Red_Dead_Redemption_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">19530383</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isRanked"/>
+        <NamedIndividual IRI="#Red_Dead_Redemption_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">54</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#releaseYear"/>
+        <NamedIndividual IRI="#Red_Dead_Redemption_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2018</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hoursWatched"/>
+        <NamedIndividual IRI="#Tales_from_the_Borderlands"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">232835</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isRanked"/>
+        <NamedIndividual IRI="#Tales_from_the_Borderlands"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3917</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#releaseYear"/>
+        <NamedIndividual IRI="#Tales_from_the_Borderlands"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2014</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasRating"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#hasRating"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#hasRating"/>
+    </SubObjectPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#isRanked"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
-    <DataPropertyRange>
-        <DataProperty IRI="#genre"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hoursWatched"/>
         <Datatype abbreviatedIRI="xsd:int"/>

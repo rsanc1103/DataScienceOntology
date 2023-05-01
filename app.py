@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 
 result = []
+lastQuery = ''
 
 @app.route('/')
 def home():
@@ -18,10 +19,12 @@ def home():
     genres = onto.search(is_a = onto.Genre)
     objectProperties = list(onto.object_properties())
     dataProperties = list(onto.data_properties())
+    depicts = onto.search(is_a = onto.Depicts)
 
     results = result
+    savedQuery = lastQuery
 
-    return render_template("index.html", cl=cl, games=games,genres=genres, ratings=ratings, objectProperties=objectProperties, dataProperties=dataProperties, results=results)
+    return render_template("index.html", cl=cl, games=games,genres=genres, ratings=ratings, objectProperties=objectProperties, dataProperties=dataProperties, results=results, savedQuery=lastQuery, depicts=depicts)
 
 @app.route('/clear', methods=['POST'])
 def clear():
@@ -42,9 +45,17 @@ def query():
     global result
     result = qres
 
+    global lastQuery
+    lastQuery = request.form.get('sparql')
+
     return redirect(url_for('home'))
 
 
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
+
+

@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gaming Popularity</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <style>
     .hidden {
@@ -16,71 +19,21 @@
 }
 
 </style>
-<body>
+<body style="font-family: 'Poppins', sans-serif;">
+    <div style="background-color: #2584FC; color: white; padding: 10px; display: flex; align-items: center; justify-content: space-around;">
+        <span>George Molina</span>
+        <span>Jose Sanchez Jr</span>
+        <h2 class="text-center" style="font-family: 'Poppins', sans-serif; font-weight: bold">Data Bandits</h2>
+        <span>Roberto Sanchez</span>
+        <span>Dylan Stallings</span>
+    </div>
     <div class="container">
         <div class="col-6" style="margin: 20px auto">
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <span>Classes</span>
-                            <select name="" id="" class="form-control">
-                                <option value=""></option>
-                                {% for c in cl %}
-                                        <option value="{{ c.name }}">{{ c.name }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="col">
-                            <span>Properties</span>
-                            <select name="" id="" class="form-control">
-                                <option value=""></option>
-                                {% for o in objectProperties %}
-                                    <option value="{{o.name}}">{{o.name}}</option>
-                                {% endfor %}
-                                {% for d in dataProperties %}
-                                    <option value="{{d.name}}">{{d.name}}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="col">
-                            <span>Ratings</span>
-                            <select name="" id="" class="form-control">
-                                <option value=""></option>
-                                {% for r in ratings %}
-                                        <option value="{{r.name}}">{{ r.name|e }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="col">
-                            <span>Genres</span>
-                            <select name="" id="" class="form-control">
-                                <option value=""></option>
-                                {% for g in genres %}
-                                        <option value="{{g.name}}">{{ g.name|e }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="col">
-                            <span>Games</span>
-                            <select name="" id="" class="form-control">
-                                <option value=""></option>
-                                {% for r in games %}
-                                        <option value="{{r.name}}">{{ r.name|e }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-        
-                    </div>
-                </div>
-            </div>
-            <br>
-
 
             <div class="card">
                 <div class="card-body">
                     <form action="/query" method="post">
-                        <textarea name="sparql" id="" cols="30" rows="10" class="form-control" placeholder="Write a SPARQL query"></textarea>
+                        <textarea name="sparql" id="" cols="30" rows="10" class="form-control" placeholder="Write a SPARQL query">{{savedQuery}}</textarea>
                         <br>
                         <div style="text-align: center;">
                             <button class="btn btn-primary" type="submit">Run</button>
@@ -88,9 +41,11 @@
                     </form>
                 </div>
             </div>
-            {% if results|length > 0 %}
-            <br>
-            <table class="table table-bordered table-hover">
+        </div>
+        {% if results|length > 0 %}
+        <br>
+        <div class="container" style="margin: 0 auto">
+            <table class="table table-bordered table-hover" style="margin: 0 auto">
                 <tbody>
                     {% for r in results %}
                         <tr>
@@ -102,13 +57,14 @@
                     {% endfor %}
                 </tbody>
             </table>
-            <div style="text-align: right">
+            <br>
+            <div style="text-align: center">
                 <form action="/clear" method="post">
                     <button class="btn btn-secondary" type="submit">Clear</button>
                 </form>
             </div>
-            {% endif %}
         </div>
+        {% endif %}
 
         <div>
             <table class="table table-hover" style="margin-top: 200px;">
@@ -118,19 +74,19 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>M. Alhamad, 29-Jan-2021 , “Video Games Rating by ‘ESRB’”, Source. [Online]. Available: <a href="https://www.kaggle.com/datasets/imohtn/video-games-rating-by-esrb">https://www.kaggle.com/datasets/imohtn/video-games-rating-by-esrb</a> . [Accessed: 27-Mar-2023].</td>
+                        <td>M. Alhamad, 29-Jan-2021 , “Video Games Rating by ‘ESRB’”, Source. [Online]. Available: <a href="https://www.kaggle.com/datasets/imohtn/video-games-rating-by-esrb">https://www.kaggle.com/datasets/imohtn/video-games-rating-by-esrb</a>.</td>
                         <td>CC0: Public Domain</td>
                     </tr>
                     <tr>
-                        <td>R. Kirsh, 4-Feb-2023 , “Top games on Twitch 2016 - 2021”, Source. [Online]. Available: <a href="https://www.kaggle.com/datasets/rankirsh/evolution-of-top-games-on-twitch">https://www.kaggle.com/datasets/rankirsh/evolution-of-top-games-on-twitch</a> . [Accessed: 27-Mar-2023].</td>
+                        <td>R. Kirsh, 4-Feb-2023 , “Top games on Twitch 2016 - 2021”, Source. [Online]. Available: <a href="https://www.kaggle.com/datasets/rankirsh/evolution-of-top-games-on-twitch">https://www.kaggle.com/datasets/rankirsh/evolution-of-top-games-on-twitch</a>.</td>
                         <td>CC0: Public Domain</td>
                     </tr>
                     <tr>
-                        <td>J. Holm, 16-Aug-2021 , “Video Game Sales Data”, Source. [Online]. Available: <a href="https://www.kaggle.com/datasets/holmjason2/videogamedata">https://www.kaggle.com/datasets/holmjason2/videogamedata</a> . [Accessed: 27-Mar-2023].</td>
+                        <td>J. Holm, 16-Aug-2021 , “Video Game Sales Data”, Source. [Online]. Available: <a href="https://www.kaggle.com/datasets/holmjason2/videogamedata">https://www.kaggle.com/datasets/holmjason2/videogamedata</a>.</td>
                         <td>CC0: Public Domain</td>
                     </tr>
                     <tr>
-                        <td>Souyama, 20-Aug-2022 , “Steam Dataset”, Source. [Online]. Available: <a href="https://www.kaggle.com/datasets/souyama/steam-dataset">https://www.kaggle.com/datasets/souyama/steam-dataset</a> . [Accessed: 27-Mar-2023].</td>
+                        <td>Souyama, 20-Aug-2022 , “Steam Dataset”, Source. [Online]. Available: <a href="https://www.kaggle.com/datasets/souyama/steam-dataset">https://www.kaggle.com/datasets/souyama/steam-dataset</a>.</td>
                         <td>CC0: Public Domain</td>
                     </tr>
                 </tbody>
